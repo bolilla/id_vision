@@ -27,3 +27,5 @@ Centralised controlling of information enables the decision making for every sin
 Centralised auditing of information (without centralised control) delegates the decision making to external (not part of the centralised one) parties. In this case, auditing is set up so that the centralised system is able to know the details about the status of the information. Actions are taken without the knowledge of the centralised system; only corrective actions may be taken, and these happen after-the-fact.
 
 In the first case, the creation of guidelines for the decision making is a good practice that helps with the job, but is not mandatory. In the second case, it is mandatory to set a framework for the work of the external parties. Without that framework, there would only be personal (individual) opinions.
+
+## TODO internal - external concept and the contact with reality. Link the keynote
