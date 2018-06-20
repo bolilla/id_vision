@@ -1,6 +1,6 @@
 # Identity-classification
 
-TODO XXX expand categories
+TODO XXX expand categories. Begin by saying this is not (just) about IAM Vs CIAM; this includes identities for whatever is important for the company.
 
 ## Concrete
 known and concise. e.g. Active Directory account
