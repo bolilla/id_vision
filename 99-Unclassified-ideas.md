@@ -1,5 +1,4 @@
 # Unclassified Ideas to be incorporated to the document
-- Repository integration and the importance of identifiers
 
 - Identity governance and optimisation
 
