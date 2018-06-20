@@ -1,8 +1,10 @@
-# Digital Identity in banking. A personal vision
+# Digital Identity in banking: a personal vision
 
-This document contains my own personal vision about digital identities, its management, its value and its use in a banking environment.
+My name is Borja Roux and this document contains my own personal vision about digital identities, its management, its value and its use in a banking environment.
 
-It tries to depict a context that may seem oniric and unrealistic, but what good may there be in a vision close to reality?
+It shows a situation that may be far away from current status for most companies at the moment, and that is one of the purposes of this work.
+
+Why would anyone write (or read) a vision that is close to current reality?
 
 ## Executive summary
 
