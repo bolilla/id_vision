@@ -13,3 +13,4 @@ Only one of the five categories is directly related to getting value from the id
 
 TODO explain each of the categories with examples
 TODO create a graph depicting the categories
+TODO add identity federation as an example of information improvement
