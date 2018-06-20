@@ -26,7 +26,7 @@ This implies some qualities that a good identifier should not have:
 - An identifier should not be a composition of the information provided: Hashing a record to create an indexable ID becomes a problem when the record changes.
 - If identifiers are provided by different (non-synchronized) parties, the ID space should not be shared: I know it is common sense, but it would not have been the first time when two different offices create documents for different people with the same ID, or two traffic offices register the same plate.
 
-## What we can do with an ID
+### What we can do with an ID
 
 It can be simplified to just two things:
 - Read, Update and Delete operations on an entity: Ok, this is the obvious one.
@@ -38,11 +38,11 @@ This information sharing is not restricted to "after-the-fact" operations. It al
 
 In case this sounds too good to be true, I'll enforce the word "enables"; it does not mean it happens overnight and automatically; it means it cannot happen smoothly without it.
 
-## What usually happens regarding identifiers
+### What usually happens regarding identifiers
 
 Once we have discussed what good identifiers are and what should not be, let's talk about what happens regarding identifiers in the real world.
 
-### Different identifiers are defined on a per system basis
+#### Different identifiers are defined on a per system basis
 
 Since it is uncommon to have strict identifier policies when the organisation is created, each system tries to solve the identification problem in the easiest (fastest, cheapest) way.
 
@@ -53,10 +53,10 @@ Some of the typical solutions are:
 - If the system deals with people who have a passport, that ID is used. This is a good approach, given you can convince your users to have a passport and give you the ID.
 - If the system creators feel lonely, an internal identifier is used; this identifier may be a composition of the entity attributes (e.g. first name plus last name), an auto-incremental value of a database, a declaredly local identifier (e.g. my-system-0001), a [UUID](https://tools.ietf.org/html/rfc4122) or some other locally defined ID. If the identifier is not good even locally (e.g. it is prone to collisions) it should be changed; if it is good, but it is local, it is a good candidate for mapping to a global identifier.
 
-### The same entity is identified by two different identifiers
+#### The same entity is identified by two different identifiers
 TODO
 
-### We cannot match entities in a system with entities in a different system
+#### We cannot match entities in a system with entities in a different system
 
 TODO re-build identifiers or have a matching algorithm or store the mapping
 
