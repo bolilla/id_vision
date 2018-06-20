@@ -6,7 +6,7 @@ Coming from an identity background, I accept my opinion regarding this subject m
 
 So far, it is common practice to hear statements associating identity with security. These statements sound like "Let's put identity at the heart of security" or "Identity is the new perimeter". We have "Identiy driven security".
 
-In my opinion identity should guide the organisation decisions. It may sound naïve, but the longer I think about the decisions being made in a company, the more I think they relate to people. Of course it is people who have to take action and endure the consequences of the decisions, but the decisions themselves are very much associated to people: the cost of the salaries of the people working for the company, the assets of the people who have trusted the company with their assets, the markets are a reflection of the societies.
+In some companies, Security discipline has begun shifting from a cost to a business enabler. So should happen with the Identity discipline. In my opinion identity should guide the organisation decisions. It may sound naïve, but the longer I think about the decisions being made in a company, the more I think they relate to people. Of course it is people who have to take action and endure the consequences of the decisions, but the decisions themselves are very much associated to people: the cost of the salaries of the people working for the company, the assets of the people who have trusted the company with their assets, the markets are a reflection of the societies.
 
 From my perspective, all actors are entities and have identities, which can be modelled, profiled, quantified and managed. Those identities are the forces of nature of the universe of the companies.
 
@@ -58,3 +58,11 @@ One of the options could be naming a Chief Identity Officier, but may be the CXF
 In my opinion the role described in the former article misses a huge part of the picture. Even when I think it would be useful to have a figure leading internal identity initiatives related to employees, as discussed in the identity classification section, there are much much more than employees when dealing with identities. Customer Identity and Access Management is a discipline in itself, ant that only covers a small portion of the relationship of a company with the customers. If we add identity profiles for customer segments, competence, fraudsters, cyberattackers, regulators and other actors that the company needs to deeply understand, the task is no piece or cake.
 
 The reason for all these things relating (at least partially) to one role is twofold: it would provide coherence to the efforts of profiling identities, applying AI, managing consents, etc; but more importantly, the role would be able to push the coherence of the identities and their identifiers across the whole organisation.
+
+## Compliance is not enough
+
+TODO
+- Compliance Vs Security
+  + Recertifications
+  + Centralised knowledge of local information
+- Compliance with stated regulatory compliance is not enough. It is required to make our behaviour with customers and employees the de-facto standard, pushing expectations of users beyond regulatory compliance to a place where we have no competence.

@@ -31,3 +31,5 @@ TODO expand (very much)
 ## Coherence in the authorisation model definition, implementation and application
 
 Implementing ABAC when the model is RBAC makes no sense
+
+TODO Explain why it is necessary to have a complex authorisation model: because it is the framework, just as the law is the framework and not all articles apply to all activities all of the time. We should use the simplest subset of the model in every case. We should simplify it as much as possible, but no further (I think it is based on Einstein's quote).

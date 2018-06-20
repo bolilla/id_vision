@@ -15,3 +15,19 @@
 - **Specific purpose for information elicitation**: Apart from regulatory-related needs (e.g. GDPR), this principle states the need for separating different uses of the identity information. In the same way as it is unethical to sell to third parties information that has been requested for sending company notifications, it is unethical to use for marketing purposes information that is elicited for fraud prevention (or vice versa).
 
 - **Not all entities are concrete**: In security, it is common to use specific information about an identity as the sole component for identity systems (e.g. a user requires an account in order to access a system). In marketing it is much more common to work with profiles of customers instead of specific customers. This difference is not as much related to the context (security vs marketing) as it is related to the purpose of the work. Just as marketing often work with actual specific customers to understand reality and create better abstractions (profiles), it must be common practice to analyse concrete subjects (e.g. cybersecurity criminals) in order to create attacker profiles and use those profiles for planning actions and countermeasures. This is currently a trend in cybersecurity which should be encouraged.
+
+## Creating a profile
+
+TODO expand
+- Identity modeling
+  + What: Behaviour Vs Psychology / Philosophy
+  + Interests / objectives
+  + Natural propension => Deviation => Psychological condition => Unimputable
+  Difference between sociopath and psychopath
+
+## Some misconceptions about identity
+
+TODO expand each
+
+- There is only one best option for a problem
+- There is a silver bullet for all problems (e.g. unified source of truth, overwriting provisioning, business rules for all privileges, RBAC, 640k memory should be enough for everyone, etc)
