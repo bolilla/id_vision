@@ -1,15 +1,12 @@
 # What is an Identity
 
-TODO review and expand
-
 Let's discuss what is an identity for the sake of this document.
 
-As a first step, let's think about identities as some means to identify people. Even when it is possible to define an identity system which may be unrelated to people (e.g. mineral classification), for the purpose of this document, highest level identities refer to people.
+As a first step, let's think about identities as some means to identify people. Even when it is possible to define an identity system which may be unrelated to people (e.g. mineral classification), for the purpose of this document, highest level [Digital] Identities refer to people.
 
-Of course, there are important things that are not people and are important for us, such as the devices of people, the buildings where they work, the cities where they live, etc. In case you're wondering yes, there are things that are related to the previous
-The most important identities belong to persons or are defined to refer to them. Digital identities are related to persons in the same way.
+Of course, there are important things that are not people, and are still relevant for us, such as the devices used by out users, the buildings where they work, the cities where they live, the privileges these people have, etc. We will treat people as first class entities and the rest of the list as second class ones.
 
-Identity refers to the type of entities that are useful for your purpose. Thinking of persons as the most important elements of work for most company systems, the rest fo the entities and their identities are subordinated to the first ones.
+There are some other identities that we must take into account and are often forgotten. Most important ones are the identities that relate to IT systems, and the identities that relate to IoT devices. In these two cases, the management is not related to the management of the identities of people.
 
 ## Identifier
 
@@ -54,11 +51,46 @@ Some of the typical solutions are:
 - If the system creators feel lonely, an internal identifier is used; this identifier may be a composition of the entity attributes (e.g. first name plus last name), an auto-incremental value of a database, a declaredly local identifier (e.g. my-system-0001), a [UUID](https://tools.ietf.org/html/rfc4122) or some other locally defined ID. If the identifier is not good even locally (e.g. it is prone to collisions) it should be changed; if it is good, but it is local, it is a good candidate for mapping to a global identifier.
 
 #### The same entity is identified by two different identifiers
-TODO
 
-#### We cannot match entities in a system with entities in a different system
+This may happen on purpose in the beginning of time (e.g. a user that registers two different identities to get a "sign in" benefit twice), we may know about this at some point in time (e.g. we find that John Doe owns two accounts: one called `jdoe`, that is not used anymore and `john.doe` with the newer policy for ID generation). Maybe this happened because of technical reasons (e.g. a user has two usernames because the system only allows one privilege profile per account) or because of personal preferences (e.g. John Doe requested a new account because `firebolt` seemed to be a cooler ID than `jdoe`).
 
-TODO re-build identifiers or have a matching algorithm or store the mapping
+In either case, the situation is the same: we have a duplication to deal with.
+
+We can do a number of things:
+- Delete the invalid value: this would be the easiest option, but it is not always conceivable or convenient (e.g. both accounts are being heavily used).
+- Merge the information in just one account: this can be a good option if the system allows aliases for the identifier (e.g. email addresses).
+- Register the duplication within the system: create a registry for this kind of scenarios. The creation, maintenance and adaptation of the tools to use it makes it impractical for many cases.
+- Register the duplication in the association with a higher-level identity: This approach is available in many IDMs (IDentity Management system), and it has the least impact in the system where the duplication happens.
+
+No matter what action we decide to take, the end must be one of these: either the duplication is eliminated, or it is accounted for and taken into account.
+
+#### We cannot match accounts in a system with the person who uses it
+
+I have known people who wouldn't believe this could ever happen in a company. Unfortunately the sad truth is there are companies, systems and accounts with this situation: the only way to find out whether the account with identifier `jdoe` belongs to John Doe or Jennifer Doe is by asking them directly.
+
+Of course this only happens in certain companies, in certain systems and for certain accounts. This is nothing more than a minimum percentage of the overall account count.
+
+As in the previous case, the most typical way of dealing with this is by adding a relationship between the person and the account in the corporate IDM. Adding a field for the matching (e.g. a global identifier within the company) may also be a good option if the system allows it.
+
+#### Orphan accounts
+
+In the previous case, we had an account that belonged to someone and we were not sure who the identifier referred to. In this case, we find an account that has not been used for a long time (if we know when was the last login for this account we are on the good track), and we are uncertain about whether it is used any more or not.
+
+The most common way to deal with this situation is by disabling all accounts which have not been used for a long time (e.g. six months). This does not provide immediate information about who the account belongs to, or whether it is used at all, but solves a possible security hole.
+
+Please beware that this is not a good option in two cases: systems that charge per account (some of them do not charge for disabled accounts), and systems that are seldom used because of their intrinsic nature; I had a really bad time when we disabled accounts in a system that was used to make the annual accounting reconciliation (with emphasis in "annual").
+
+#### Accounts for systems or things which have no person in charge
+
+Banking is a context where changes to not happen overnight. We all know stories about people in banking who have created quick and dirty programs which were supposed to "last for just a few months until the final solution arrives", and these systems have outlived their creators.
+
+I believe the identity of a system does not have to be subordinated to the one of a person, but there must be some way to govern that identity, and (so far) it takes people to make the governing.
+
+Depending on the company, the maturity in the management of these account varies, but in most cases it is a matter that does not receive enough attention.
+
+Anecdotes go from entire departments that disappear and no one owns these accounts anymore, to production systems that fail overnight because there was some crucial service running with the personal account of an employee who has retired.
+
+This is certainly one of the many aspects of Identity Management that needs to be acknowledged by companies and taken care of by ID professionals.
 
 ## Identity federation
 
@@ -73,13 +105,33 @@ The options for this hack require a balance between refactoring, strict policy s
 
 Once we have some means to traverse repositories in the same way we could traverse tables using SQL foreign keys, we're prepared to make use of the information.
 
+I think what really gives value to the identities is the relationship between them. When crossing information across repositories we do not only enrich individual identities; we also increase the relationships between them.
+
+This enrichment is such an army knife (it can be used for so many things) that in many cases the initiatives to federate identity information across the company lacks a specific sponsor (with enough weight in the company as to make it possible). Some cases it happens because there is no single and clear use case and sometimes because it requires aligning too many actors.
+
 ## Identity unfederability
 
-TODO What do we do when we specifically do NOT want the identity information to be crossed.
+There are times when we do not want the information of a repository to be federated with other repositories.
+
+This is more common than we may think:
+- We provide identifiers to third parties for them to refer to our identities (normally employees or customers), but we do not want them to know who is the person behind the identifier.
+- We fear finding a credit card database dump in the deep web.
+- We want to execute some work on a database that cannot relate the information with real subjects (e.g. database dumps for software developers)
+
+In these cases (and supposing the company wants to maintain the ability to make the matching with actual identities) most common options are:
+- Create a database to store the mapping of the identifiers.
+- Use some FPE [Format Preserving Encryption](https://en.wikipedia.org/wiki/Format-preserving_encryption) algorithm and store only the key.
+
+In the first case, there is a new database to manage (and backup, and make available, etc) and the mapping may be updated at some point with a limited impact; in the second case there is only one element of information for all the mapping, which is easier to manage and more troublesome when lost (or shared).
 
 ## Which is a good identifier for a company
 
-TODO internal identifier, because we want to cross information internally, but not externally.
+Taking into account all this, I personally believe a company should have its own global identifier, unrelated to any element of information of the entity, using the same address space for all kinds of identities (employees, customers, devices, services, etc). [UUID](https://tools.ietf.org/html/rfc4122) seems to be a good starting point.
 
-TODO complete
-TODO an employee which is also an external is two entities or just one?
+May be this is sounds overkill; I can hear voices saying it does not pay off having a 128 bits identifier for a group when all the information about the group is the name, when the name is as short as `admin`, when the name of the group is unique for the whole system, when spelling a UUID is annoying, given you have to externally map the identifier for systems that do not allow the use of custom identifiers, etc. Even in this case, I would stand for a global identifier.
+
+## What happens when an entity legally belongs to two different entity types
+
+We are not going to see an IoT device that is also an employee of the company (at least not in the short term), but we can find internal employees who have been external contractors, and at the same time consumers of our services and paying customers.
+
+In these cases I would suggest to have one single identity, one single identifier, and as many accounts as they are needed.

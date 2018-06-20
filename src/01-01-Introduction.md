@@ -6,11 +6,11 @@ It shows a situation that may be far away from current status for most companies
 
 Why would anyone write (or read) a vision that is close to current reality?
 
-## Executive summary
+# Executive summary
 
 TODO
 
-## Some concepts about identity
+# Some concepts about identity
 
 TODO expand each
 
@@ -33,3 +33,4 @@ TODO expand each
 - OAUTH
 - OIDC
 - Business rules in the context of automatic provisioning
+- Account (and orphan account)

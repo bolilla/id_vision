@@ -2,7 +2,8 @@
 
 TODO expand
 - This applies mostly to internal identities
-- Management of provisioning, reconciliation and discrepancies
+- Management of provisioning, reconciliation and discrepancies; cascade updating, enabling, disabling, etc
+- IoT identities, systems / service identities
 - Workflows
 - Concept "if you manage it, you get its problems" (e.g. management of the entitlements of a system in the centralised IDM)
 - Identity governance and optimisation
@@ -20,3 +21,4 @@ TODO expand
 - Transparency in the identity governance processes, responsibilities, implications and risks
   + SoD analysis based on entitlements and systems (not roles)
   + Cloning users
+- Good job is seldom recognized
