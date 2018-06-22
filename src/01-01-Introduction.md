@@ -14,8 +14,8 @@ TODO
 
 TODO expand each
 
-- IAM
-- CIAM
+- IAM (Identity and Access Management): The discipline that works with identities, specially with the security-related aspects. Classically it has focused mostly on user accounts and their privileges.
+- CIAM (Customer Identity and Access Management): The discipline that works in detail with the with identities of customers and consumers.
 - IDM
 - Governance
 - Administration
@@ -33,4 +33,6 @@ TODO expand each
 - OAUTH
 - OIDC
 - Business rules in the context of automatic provisioning
-- Account (and orphan account)
+- Account: a record of an identity in a system. Enables the access to the actions performed by the system.
+- Orphan Account: account that is not known to be tied to any person.
+- Privileged Account: account with special (administrative) privileges. May be associated to specific person or may be anonymous.

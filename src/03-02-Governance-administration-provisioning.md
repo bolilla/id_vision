@@ -22,3 +22,6 @@ TODO expand
   + SoD analysis based on entitlements and systems (not roles)
   + Cloning users
 - Good job is seldom recognized
+- iterating analysis of the identity because of
+  + New information received
+  + Information deleted (right to be forgotten)
