@@ -38,3 +38,4 @@ TODO expand each
 - Privileged Account: account with special (administrative) privileges. May be associated to specific person or may be anonymous.
 - Identity Federation: Linking information about an identity from different sources ([according to wikipedia](https://en.wikipedia.org/wiki/Federated_identity)). This term is used extensively in the context of SSO, but it is not exclusive to it. The value of linking identity information from different sources goes much beyond an easy login.
 - SSO TODO
+- PAM (Privileged Access Management): TODO
