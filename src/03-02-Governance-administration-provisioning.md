@@ -25,3 +25,4 @@ TODO expand
 - iterating analysis of the identity because of
   + New information received
   + Information deleted (right to be forgotten)
+- Role mining
