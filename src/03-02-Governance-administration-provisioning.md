@@ -1,6 +1,7 @@
 # Identity Governance, administration, provisioning and reconciliation
 
 TODO expand
+
 - This applies mostly to internal identities
 - Management of provisioning, reconciliation and discrepancies; cascade updating, enabling, disabling, etc
 - IoT identities, systems / service identities

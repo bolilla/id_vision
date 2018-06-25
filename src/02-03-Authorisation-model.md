@@ -5,6 +5,7 @@ Even when this document tries to be applicable to identities independently of th
 ## Classic authorisation models
 
 Just in case the reader is not familiar with the classical authorisation models, let's quickly review them:
+
 - **[MAC](https://en.wikipedia.org/wiki/Mandatory_access_control) (Mandatory Access Control),  [DAC](https://en.wikipedia.org/wiki/Discretionary_access_control) (Discretionary Access Control) and [ACL](https://en.wikipedia.org/wiki/Access_control_list) (Access Control List)**: These authorisation models are based on associating specific individual identities and entitlements (operation privileges on an object).
 - **[RBAC](https://en.wikipedia.org/wiki/Role-based_access_control) (Role Based Access Control)**: Authorisation model that extends the previous ones by associating users (identities) to roles (which are identities too) and roles to entitlements.
 - **[ABAC](https://en.wikipedia.org/wiki/Attribute-based_access_control) (Attribute Based Access Control)**: Authorisation model that extends the previous ones by associating identity attributes to authorisation policies and the authorisation policies to entitlements.
@@ -26,6 +27,7 @@ Business Rules are (as called by some Identity suite vendors) policies that auto
 A good set of business rules will automate much of the process of providing entitlements to users; they are specially useful when a change to an identity (onboarding, department change, promotion, etc) happens.
 
 A good implementation of the business rules should also have the following characteristics:
+
 - Monitoring of changes in the identities' attributes to know when do they have to be triggered online
 - Be applied to more than user-role relationships: modify other attributes, detect and alert inconsistencies in data, etc
 - Detect when the rule no longer applies and its effects should be reversed (e.g. provided roles should be removed)
@@ -51,6 +53,7 @@ Both approaches are based on the assumption (or the hope) that the business proc
 When a user is associated to a role, that relationship may have attributes.
 
 In case it is not obvious why this is mandatory, let's analyse the modelling of this authorisation scenario:
+
 - There is an entitlement that enables a user to approve a mortgage. We'll call it e_mort_a
 - There size of the mortgage that the user can approve is not the same for all users
 - There is a role associated to that entitlement. We'll call it r_mort_a
@@ -85,12 +88,14 @@ I have heard colleagues arguing that all user-role associations should have an e
 A user must be able to have multiple relationships with the same role, because these relationships may have differences (even when the entitlements that they provide to the user may all be the same).
 
 To illustrate this need, let's check this case:
+
 - Adam belongs to consultancy department
 - Adam is provided a role (let's call it "r_sales") that enables him to edit sales proposals for six months (enough time to help with a certain proposal for a customer)
 - Adam is moved to the sales department, which grants him "r_sales" role
 - Adam leaves the sales department, his department no longer grants him "r_sales" role
 
 There are some conditions that have to happen:
+
 - Adam has to have "r_sales" for six months
 - Adam has to have "r_sales" while he is in the sales department
 
@@ -120,17 +125,48 @@ There are many different kinds of role to role relationships:
 
 ### A deeper look into ABAC
 
-TODO continue
+So, we have discussed a bit about roles and role based access control. It may seem enough for most, but it falls short (really short) for many cases. Before showing some examples, let's talk about attributes.
+
+Attribute (according to [Wikipedia](https://en.wikipedia.org/wiki/Attribute_%28computing%29)) is a specification that defines a property. One may think about it as a value (stored in some repository), but that is just one of the possible implementation. It may be calculated in real time, cached, etc. It is a definition, that may be implemented in an infinite number of ways. That said, storing a value in the database will suit 90% of the use cases.
+
+We know what is an attribute, but what things may have attributes? Any entity; that is where the qualitative difference with roles lies. Attributes may be associated to the user that is making an operation, to the object that the user tries to access, to the roles the user is associated, to the environment where the operation takes place (e.g. time of day), to other entities affected by the operation (e.g. when a user operates between two bank accounts, we may wish to check her relationship with the set of owners of both accounts).
+
+With this understanding about attributes, I think it is easier to think about scenarios where RBAC is not enough:
+
+- A user can only access an application during working hours
+- Employees with a range of "director" may see and comment documents classified as "strategic" and "Draft".
+
+If RBAC is properly implemented (as discussed earlier), much of the requirements related to ABAC is already in place.
+
+#### Identity dimensions applied to ABAC
+
+In a RBAC authorisation model, and given authorisation is a matter of security, roles and role management usually fit under the umbrella of security. In ABAC attributes are introduced into the equation, and in some cases the management of these attributes is not done by the same team as the one managing roles.
+
+It is important to understand the reliability of the information we are using. This does not mean that only information managed by the security team may be used, or that there must be a validation of the information before using it. It is just a call to notice the three dimensions of the identities: completitude, reliability and fragmentation.
+
+If the information is not "complete enough", it is difficult to set authorisation policies that make use of fields that may be missing.
+
+If the information is not "reliable enough", it is difficult to use that information for security matters.
+
+If the information is too fragmented, it may be impracticable to evaluate attributes and authorisation policies with the performance required.
 
 ### Is there room for MAC/DAC/ACL?
 
-Yes; specially for DAC. TODO expand.
+Yes; specially for DAC.
 
-## Information about entitlements of a system inside the an IDM (corporate or specific for the application)
+It may sound strange, after explaining RBAC and ABAC and explaining how these models cover extremely complex scenarios, and of course I am not going to argue that all authorisation should rely on a management done per-identity, but in some cases it is better and easier to do so.
+
+If you have a pet, maybe you have to leave it to someone you trusted. In that case, either you bring your pet to that person's house, or you bring that person the keys to your home. In either case you are empowering one specific person because you trust her. That trust is affected by many factors, but most probably you would not trust any other person, even if that person has the same age, height, weight, professional experience, etc.
+
+Attributes (and roles are just one type of attributes) are not all there is about an identity. We already discussed identity management requires accepting we are making tradeoffs and simplifications about identities. It is simply impossible to have *all* the knowledge about a person in a system.
+
+Of course the use of an specific assignment of one user to an operation over an object (or any other form of DAC "policy") must retail the properties we have discussed: the action must be audited, the reason for the assignment must be recorded, depending on the criticality of the action it may not be allowed, etc.
+
+Robert C. Martin in his book [Clean Architecture](https://www.amazon.es/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164/ref=sr_1_1?ie=UTF8&qid=1529923708) shows that software development paradigms (structured programming, object oriented programming, etc) are just restrictions to the original programming methods with direct access to hardware resources. In the same way I think authorisation models are restrictions over primitive identity management mechanisms, well deserved and well needed restrictions, but restrictions none the less.
 
 ## Coherence in the authorisation model definition, implementation and application
 
-TOD expand Implementing ABAC when the model is RBAC makes no sense
+TODO expand Implementing ABAC when the model is RBAC makes no sense
 
 TODO Explain why it is necessary to have a complex authorisation model: because it is the framework, just as the law is the framework and not all articles apply to all activities all of the time. We should use the simplest subset of the model in every case. We should simplify it as much as possible, but no further (I think it is based on Einstein's quote).
 
@@ -141,3 +177,5 @@ TODO Segregation of duties based on entitlement information or entitlement-syste
 TODO Discussion about Identity Manager
 
 TODO Changes in the authorisation model must be propagated immediately
+
+TODO Resulting actions after the evaluation of an authorisation may be very diverse (ok/ko/whatever the application may require). The thin and grey line between security authorisation and business logic.

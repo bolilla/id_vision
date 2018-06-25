@@ -5,6 +5,7 @@ Identity federation is the ability to integrate information about an entity from
 We have concluded in the real world it is quite uncommon to have a common identifier for all systems. This means we need some hack in order for this federation to work.
 
 The options for this hack require a balance between refactoring, strict policy setting and identifier mapping. Let's take a look at them:
+
 - Refactoring: modifying the identifier of a system in order to use a more global identifier. This requires de definition of a global identifier across the company and the modification in the target system (which is not always possible).
 - Strict policy setting: We can set a policy to infer an identifier from the information about a user. A typical example of this is the use of the first letter of the first name plus the last name as the ID for the email. This may work until you have collisions and you have people changing their name (e.g. getting married). This policy must be carefully chosen and is almost never a perfect solution in the long term.
 - Identifier mapping: Establishing a mapping between a global identifier (or an identifier in a different system) and the value of the identifier in the target system. The cost of this solution falls in between the other two, and usually well prepared for the changes in the future.
@@ -20,11 +21,13 @@ This enrichment is such an army knife (it can be used for so many things) that i
 There are times when we do not want the information of a repository to be federated with other repositories.
 
 This is more common than we may think:
+
 - We provide identifiers to third parties for them to refer to our identities (normally employees or customers), but we do not want them to know who is the person behind the identifier.
 - We fear finding a credit card database dump in the deep web.
 - We want to execute some work on a database that cannot relate the information with real subjects (e.g. database dumps for software developers)
 
 In these cases (and supposing the company wants to maintain the ability to make the matching with actual identities) most common options are:
+
 - Create a database to store the mapping of the identifiers.
 - Use some FPE [Format Preserving Encryption](https://en.wikipedia.org/wiki/Format-preserving_encryption) algorithm and store only the key.
 

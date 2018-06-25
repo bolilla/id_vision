@@ -61,9 +61,8 @@ The reason for all these things relating (at least partially) to one role is two
 
 ### The Identity Team
 
-# The identity team
-
 TODO What it is and what it does, and what it does not do (e.g. it does not manage all the identities).
+
 - Define global authorisation model
 - Define global identity management model
 - Define global rules regarding data retention, recertification and any other regulatory compliance matter
@@ -81,6 +80,7 @@ TODO ask for a rainbow colour for the identity team. Possibly Aqua from the (rai
 ## Compliance is not enough
 
 TODO
+
 - Compliance Vs Security
   + Recertifications
   + Centralised knowledge of local information

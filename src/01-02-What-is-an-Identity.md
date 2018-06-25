@@ -19,6 +19,7 @@ Forgive me if I go from truism to truism, but I want the reasoning to go smooth.
 - An entity ID does not change unless the true nature of the entity changes: I can change my name, address, gender and physical aspect and I should remain with the same ID. This means that it is not (just) the information registered about me that defines who I am.
 
 This implies some qualities that a good identifier should not have:
+
 - An identifier should not be based (just) on the information registered: I may change my email address and name and remain being the same person.
 - An identifier should not be a composition of the information provided: Hashing a record to create an indexable ID becomes a problem when the record changes.
 - If identifiers are provided by different (non-synchronized) parties, the ID space should not be shared: I know it is common sense, but it would not have been the first time when two different offices create documents for different people with the same ID, or two traffic offices register the same plate.
@@ -26,6 +27,7 @@ This implies some qualities that a good identifier should not have:
 ### What we can do with an ID
 
 It can be simplified to just two things:
+
 - Read, Update and Delete operations on an entity: Ok, this is the obvious one.
 - Cross information from different sources: This is more interesting. If we have the same ID in two different databases, we can cross the information in them.
 
@@ -44,6 +46,7 @@ Once we have discussed what good identifiers are and what should not be, let's t
 Since it is uncommon to have strict identifier policies when the organisation is created, each system tries to solve the identification problem in the easiest (fastest, cheapest) way.
 
 Some of the typical solutions are:
+
 - If the system uses a directory to store identities, the DN (Distinguished Name) is used as the identifier. This ID is useful just within the repository; it ties the system to the technology chosen for the storage of the information.
 - If the application enables consumer self-registration, the email is used. For this choosing to be perfect, we have to assume a person does not register with more than one email (this is something possibly no one has ever done to get a second free month from Netflix ;) ), suppose the user will be loyal to his email domain forever.
 - If the system deals with people from a single nationality, use the national id card. This may work (apart from some mistakes by public administration) if the company works in just one country. If the company works in different countries, identifiers are different; if a user belongs to two countries problems may arise.
@@ -57,6 +60,7 @@ This may happen on purpose in the beginning of time (e.g. a user that registers 
 In either case, the situation is the same: we have a duplication to deal with.
 
 We can do a number of things:
+
 - Delete the invalid value: this would be the easiest option, but it is not always conceivable or convenient (e.g. both accounts are being heavily used).
 - Merge the information in just one account: this can be a good option if the system allows aliases for the identifier (e.g. email addresses).
 - Register the duplication within the system: create a registry for this kind of scenarios. The creation, maintenance and adaptation of the tools to use it makes it impractical for many cases.
