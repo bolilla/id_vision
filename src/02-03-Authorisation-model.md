@@ -164,18 +164,21 @@ Of course the use of an specific assignment of one user to an operation over an 
 
 Robert C. Martin in his book [Clean Architecture](https://www.amazon.es/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164/ref=sr_1_1?ie=UTF8&qid=1529923708) shows that software development paradigms (structured programming, object oriented programming, etc) are just restrictions to the original programming methods with direct access to hardware resources. In the same way I think authorisation models are restrictions over primitive identity management mechanisms, well deserved and well needed restrictions, but restrictions none the less.
 
-## Coherence in the authorisation model definition, implementation and application
+## The reason for a complex authorisation model
 
-TODO expand Implementing ABAC when the model is RBAC makes no sense
+When reading these explanations about an authorisation model, it may seem obvious to ask "Why should we take so much work into defining such a complex thing?", or "Why should we define the authorisation model as something so complex?".
 
-TODO Explain why it is necessary to have a complex authorisation model: because it is the framework, just as the law is the framework and not all articles apply to all activities all of the time. We should use the simplest subset of the model in every case. We should simplify it as much as possible, but no further (I think it is based on Einstein's quote).
+There are two reasons for this:
 
-TODO Authorisation in microservice architectures (OIDC Vs XACML)
+- Complexity in the authorisation model definition reduces complexity in the identity management
+- The authorisation model for a company is the framework for the authorisation models of the systems run in the company
 
-TODO Segregation of duties based on entitlement information or entitlement-system or system-system to prevent problems when roles change. Possibly relate this to dependency diagrams in "Clean architecture".
+The first statement is something we have seen many times, that a simpler authorisation model than needed may do the job, but at a cost of increasing the complexity exponentially. To illustrate the second statement, let's think about this scenario where a fictional system and a fictional company: the company uses an ACL for identity management and the system is based on groups (RBAC). It is possible to maintain an ACL with the association of users and resources, but the complexity grows exponentially.
 
-TODO Discussion about Identity Manager
+[//]: # (XXX Insert a diagram showing the difference between ACL and RBAC)
 
-TODO Changes in the authorisation model must be propagated immediately
+## Propagation of the changes in the authorisation model and the attributes
 
-TODO Resulting actions after the evaluation of an authorisation may be very diverse (ok/ko/whatever the application may require). The thin and grey line between security authorisation and business logic.
+In order to be able to make an appropriate security enforcement of the authorisation model, it is required to have updated information. Information propagation should happen online; if not immediately, at least as a best-effort.
+
+It sounds simple, but when designing an implementation for the authorisation model, it is necessary to take into account what elements of information are going to be updated and when are these changes going to be taken into account.
