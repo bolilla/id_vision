@@ -4,7 +4,7 @@
 
 - **Model reality**: Do not force identities to accommodate your model. Expand your model to accommodate them.
 
-- **Reading and reconciling over writing and controlling**: Watch the status of the identities and ask for information about why do they look the way they do. Do not try to impose restrictions until you understand the nature of the identities in a particular context. **TODO** link to the inner-outer company video and explain its principles.
+- **Reading and reconciling over writing and controlling**: Watch the status of the identities and ask for information about why do they look the way they do. Do not try to impose restrictions until you understand the nature of the identities in a particular context.
 
 - **A static repository schema is never enough**: It does not matter how much time you take into analysing and understanding current needs of a system. When a system goes live and reality knocks to the door of the system designers, options are making reality fit into your model (which is discussed in its own principle), or helping your model fit into the reality.
 
@@ -30,4 +30,4 @@ I'd like to present some of the ideas that at some point seem to have been fixed
 
 - **One best solution**: Identities is a really complex topic. It tries to model an extremely complex world into as few abstractions as possible. If we were not so used to this kind of abstractions, we would think that modelling a person (with all her complexity) into a username (of up to 8 characters) and a password (with its uppercase and lower case letters) is some kind of joke. The "solutions" in identity management are always a tradeoff where you lose much in exchange for (some of) the value you seek, while trying to maintain complexity at a reasonable level.
 
-- **Linear growth of complexity**: TODO explain that most complexity increases in identity management (specially in authorisation modelling) do not increase complexity in a linear way, but in an exponential way.
+- **Linear growth of complexity**: Identities take their value from relationships (e.g. user-role, person-person, etc). Relationships in a network (at least most of the ones related to identities) grow exponentially as the number of nodes grow linearly. This means the complexity of managing one thousand identities is not half complex as managing two thousand. It is way simpler. This also means that if identity modelling is not done right, the impact of generating "too many identities" is exponential to the number of identities created.
