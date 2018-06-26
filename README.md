@@ -10,13 +10,15 @@ The information in this repository is stored in Markdown format. If you prefer a
 
 You need a command line and [pandoc](https://pandoc.org/) in order to generate the output in a format different than Markdown.
 
-### Generating html format
+It may be also needed [pdflatex](https://en.wikipedia.org/wiki/PdfTeX) or an alternative pdf engine to generate pdf files.
+
+### Generating readable formats
 
 Just execute the following command
 ```
 ./build
 ```
-This will generate an html version of the contents of this repository in a directory called `tmp`. It will contain two files: `0000000000-id_vision.html` with a timestamp mark of the time when the file was generated and `LATEST-id_vision.html` with the latest version of the file.
+This will generate a readable version of the contents of this repository in a directory called `tmp`. It will contain files: `0000000000-id_vision.XX` with a timestamp mark of the time when the file was generated and `LATEST-id_vision.XX` with the latest version of the file.
 
 ## Author
 
