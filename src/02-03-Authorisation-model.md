@@ -152,9 +152,7 @@ If the information is too fragmented, it may be impracticable to evaluate attrib
 
 ### Is there room for MAC/DAC/ACL?
 
-Yes; specially for DAC.
-
-It may sound strange, after explaining RBAC and ABAC and explaining how these models cover extremely complex scenarios, and of course I am not going to argue that all authorisation should rely on a management done per-identity, but in some cases it is better and easier to do so.
+Yes. It may sound strange, after explaining RBAC and ABAC and explaining how these models cover extremely complex scenarios, and of course I am not going to argue that all authorisation should rely on a management done per-identity, but in some cases it is better and easier to do so.
 
 If you have a pet, maybe you have to leave it to someone you trusted. In that case, either you bring your pet to that person's house, or you bring that person the keys to your home. In either case you are empowering one specific person because you trust her. That trust is affected by many factors, but most probably you would not trust any other person, even if that person has the same age, height, weight, professional experience, etc.
 

@@ -22,8 +22,10 @@ TODO expand
 - Transparency in the identity governance processes, responsibilities, implications and risks
   + SoD analysis based on entitlements and systems (not roles)
   + Cloning users
-- Good job is seldom recognized
+- Good job is seldom recognised
 - iterating analysis of the identity because of
   + New information received
   + Information deleted (right to be forgotten)
 - Role mining
+- Governance is divided into three categories: lifecycle management for updates in recertification, information improvement for authorisation model improvements and information retrieval for compliance verification
+TODO Segregation of duties based on entitlement information or entitlement-system or system-system to prevent problems when roles change. Possibly relate this to dependency diagrams in "Clean architecture".
