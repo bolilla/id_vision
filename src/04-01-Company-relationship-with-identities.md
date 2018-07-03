@@ -10,6 +10,17 @@ In some companies, Security discipline has begun shifting from a cost to a busin
 
 From my perspective, all actors are entities and have identities, which can be modelled, profiled, quantified and managed. Those identities are the forces of nature of the universe of the companies.
 
+### Servant leadership of identity management
+
+I truly believe identities should lead businesses, and proper identity management is a key factor in business, as identities include employees, customers, partners, competitors, threats and other stakeholders (which shape the context for the decision making).
+
+A good (marvellous) approach to identity management is almost invisible. Things happen the way This leads to one of the common pitfalls in identity strategy definition: it does not provide visibility.
+
+If there is a place for [servant leadership](https://en.wikipedia.org/wiki/Servant_leadership), it is in identity management.
+
+Identities (and their relationships) will shape the future of businesses, but the management of those identities will happen underneath the surface. I have never seen an interview to the project manager of an identity initiative explaining how valuable his contribution has been for the company success, no matter how well (or bad) the project went.
+
+
 ## Relationship with the identity community
 
 Identity management is a complex subject and is full of moving targets. As the whole company relates to identities (at least because they use user accounts to access the tools they use on a daily basis), identity initiatives are extremely complex from both the human-political and the technical perspective.
@@ -70,7 +81,8 @@ TODO What it is and what it does, and what it does not do (e.g. it does not mana
 - Define global rules for
 - Their reality is not the system that holds or uses the identities, but the policies in the organisation
 - Implement non-intrusive means to check correctness of the systems
-- Provide tools for management as simple as possible
+- Provide tools for management (including workflows) as simple as possible
+- Implement (or guide in the implementation of) the identity analysis processes
 
 TODO expand [Alberto Partida](https://www.springer.com/us/book/9789048188819) assimilates it to the blue team, but I disagree.
 

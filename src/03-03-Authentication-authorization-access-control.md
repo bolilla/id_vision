@@ -1,9 +1,14 @@
 # Authentication, authorisation and access control
 
+TODO expand
 - EAM
+- Modifications to the requested operation (e.g. modifying sql queries)
 - SSO and flexibility in this concept (tokens vs browser plugins). It is mandatory to do it as well as possible.
 - PAM
 TODO Authorisation in microservice architectures (OIDC Vs XACML)
+
+- Authorisation management: based on "centralised control vs distribution and audit" section
+  + Add comparison of OIDC (scopes based) Vs XACML (authorisation in the operation request)
 
 ## Actions resulting from the authorisation
 
