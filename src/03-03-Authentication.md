@@ -195,3 +195,17 @@ In these cases I always think about the following elements:
 In the case of the tobacco machine and the id card, the token contains much more information than the bare minimum to make the authentication, but we rely on the id reader to not track the rest of the information.
 
 In some protocols such as SAML this scenario is well supported by using disposable identifiers and adding the set of claims that the service provider requires. In some other contexts, this may be a challenge.
+
+## Talk or share in delegated authentication
+
+Authentication usually happens in a delegated way. There is a party that makes the authentication and another party that relies on the first one and accepts the identity.
+
+There are two possible ways for this to happen: either these two parties share some cryptographic element of information (share) or there is a communication between them in order to verify the authentication token.
+
+Each has its own pros and cons, but we can summarise this:
+
+- When sharing, scaling can be difficult, as newcomers have to share information with at least one party, and that one party has to share information with all of them.
+
+- When talking, there is always an overhead in the process due to the validation of the token that has to happen in the authentication party.
+
+As always, there is no single approach that fits all cases. There is no silver bullet.

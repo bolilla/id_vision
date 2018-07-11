@@ -6,7 +6,6 @@ TODO expand
 - Modifications to the requested operation (e.g. modifying sql queries)
 - PAM
 TODO Authorisation in microservice architectures (OIDC Vs XACML)
-- Talk or share
 
 - Authorisation management: based on "centralised control vs distribution and audit" section
   + Add comparison of OIDC (scopes based) Vs XACML (authorisation in the operation request)
