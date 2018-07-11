@@ -1,3 +1,7 @@
-% A personal vision on digital identities in banking
-% Borja Roux Lorenzo
-% June 2018
+---
+title: Digital Identities
+subtitle: A personal vision on identities in banking
+author: Borja Roux
+date: July 2018
+documentclass: report
+---
