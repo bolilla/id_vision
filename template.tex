@@ -73,7 +73,6 @@ $endif$
 \urlstyle{same}  % don't use monospace font for urls
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\pagenumbering{arabic}
 \lhead{\itshape $title$}
 \chead{}
 \rhead{\itshape{\nouppercase{\leftmark}}}
@@ -197,6 +196,8 @@ $endif$
 $if(lof)$
 \listoffigures
 $endif$
+
+\pagenumbering{arabic}
 
 $body$
 
