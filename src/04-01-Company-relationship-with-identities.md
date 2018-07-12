@@ -72,23 +72,29 @@ The reason for all these things relating (at least partially) to one role is two
 
 ### The Identity Team
 
-TODO What it is and what it does, and what it does not do (e.g. it does not manage all the identities).
+The identity team is the set of people whose primary concern are identities and their management. Both concerns are much broader than IT system accounts and both concepts encompass much more than "doing the things".
 
-- Define global authorisation model
-- Define global identity management model
-- Define global rules regarding data retention, recertification and any other regulatory compliance matter
-- Define global rules for SoD
-- Define global rules for
-- Their reality is not the system that holds or uses the identities, but the policies in the organisation
-- Implement non-intrusive means to check correctness of the systems
-- Provide tools for management (including workflows) as simple as possible
-- Implement (or guide in the implementation of) the identity analysis processes
+The identity team is accountable for the definition of the global authorisation model, the global identity management model and setting the rules regarding data retention, permission recertification, segregation of duties and any other regulatory considerations. They are also accountable for the abiding of those rules, but they are not necessarily accountable for implementing all the mechanisms that support identities.
 
-TODO expand [Alberto Partida](https://www.springer.com/us/book/9789048188819) assimilates it to the blue team, but I disagree.
+The identity team should set up as little mechanisms as possible for the management and as many mechanisms as required for the auditing and validation of the defined rules. This way of working allows the identity team to be a contributor to the company without becoming a bottleneck and a stopper for the rest of the teams.
 
-TODO ask for a rainbow colour for the identity team. Possibly Aqua from the (rainbow series)[https://en.wikipedia.org/wiki/Rainbow_Series].
+The focus of this team is not the operation of the IDM and the implementation of workflows or generating reports about identities, but the identity policies that help the company meeting regulations and doing business.
+
+Some authors such as [Alberto Partida](https://www.springer.com/us/book/9789048188819) assimilates the identity team to the [blue team](https://en.wikipedia.org/wiki/Blue_team_(computer_security)) (the team that ensures security), but I disagree. I think identities are much more than security, and security is much more than identities.
+
+If there is a colour for the identity team I think Aqua from the (rainbow series)[https://en.wikipedia.org/wiki/Rainbow_Series] is a good option.
 
 ## Compliance is not enough
+
+Isaas Asimov via his character Salvor Hardin said "Never let your sense of morals prevent you from doing what is right!". Well, regarding compliance you may have similar disjunctives.
+
+Compliance to regulations is mandatory, and compliance to standards is a good practice. The way compliance is achieved is where the devil resides.
+
+It is possible to achieve compliance in many ways, and some of them are equally valid from a compliance point of view, but very different from a strategic point of view.
+
+When a new system is added into the card payment process, it has to be [PCI](https://en.wikipedia.org/wiki/Payment_Card_Industry_Data_Security_Standard) compliant. That is good. What could not be so good is to decide that the system should not be created because going through PCI is "too much work". In identities, similar situations arise.
+
+In my opinion, compliance should not be the objective, but the bare minimum.
 
 TODO
 
