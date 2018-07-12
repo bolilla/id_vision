@@ -94,14 +94,10 @@ It is possible to achieve compliance in many ways, and some of them are equally 
 
 When a new system is added into the card payment process, it has to be [PCI](https://en.wikipedia.org/wiki/Payment_Card_Industry_Data_Security_Standard) compliant. That is good. What could not be so good is to decide that the system should not be created because going through PCI is "too much work". In identities, similar situations arise.
 
-In my opinion, compliance should not be the objective, but the bare minimum.
+In my opinion, compliance should not be the objective, but the bare minimum, and should only be taken into account once the strategy is clear. Adding the compliance requirements when the strategy is not clear will most likely make compliance the only thought strategy.
 
-TODO
+In some cases (I am thinking about PSD2 and GDPR) the regulation helps setting a direction of the efforts, but it should not be the target, but the beginning of the road to take. Self-sovereign identity is something to aim for. Our customers will be happier, make better decisions and (hopefully) remain within our company as they feel the respect for their privacy and decisions. In this case I am not restricting the concept of Self-sovereign identity to the [common semantic](https://en.wikipedia.org/wiki/Digital_identity#Self-sovereign_identity); I am expanding it to the full self-awareness of what our digital identity is and gaining full control over it.
 
-- Compliance Vs Security
-  + Recertifications
-  + Centralised knowledge of local information
-- Compliance with stated regulatory compliance is not enough. It is required to make our behaviour with customers and employees the de-facto standard, pushing expectations of users beyond regulatory compliance to a place where we have no competence.
 
 ## Standard based Vs Ad hoc is the new Build or Buy
 
