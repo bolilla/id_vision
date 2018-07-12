@@ -2,6 +2,8 @@
 
 This document contains my own personal vision about digital identities, its management, its value and its use in a banking environment.
 
+I have chosen banking sector because I think there is a "perfect storm" coming in that sector regarding identities: the banking model is changing, the relationship with customers and employees are changing, the normative framework is changing and the threats are changing too. All these fronts must be tackled sooner rather than later, and I think focus on identities may provide a fresh view to set company strategies.
+
 It shows a situation that may be far away from current status for most companies at the moment, and that is one of the purposes of this work. Why would anyone write (or read) a vision that is close to current reality?
 
 # Executive summary
