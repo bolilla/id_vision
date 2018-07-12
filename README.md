@@ -1,8 +1,10 @@
 # A personal vision on identities in banking by Borja Roux
 
-This repository contains my personal thoughts about identities in general, identity management for both customers and employees, the future of identities, the role of the
+This repository contains my personal thoughts about identities in general, beyond identity management for both customers and employees.
 
-## Getting a readable version
+Latest readable version can be retrieved [here](LATEST-id_vision.pdf).
+
+## Generating a readable version
 
 The information in this repository is stored in Markdown format. If you prefer a more legible version, you can "compile" it in order to generate an html file that can be viewed in any browser.
 
